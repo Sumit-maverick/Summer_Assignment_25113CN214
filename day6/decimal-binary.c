@@ -1,0 +1,17 @@
+/* Program to convert decimal number to binary */
+#include<stdio.h>
+int main()
+{
+    int d, b = 0, i = 1, remainder;
+    printf("Enter a decimal number: ");
+    scanf("%d", &d);
+    while(d != 0)
+    {
+        remainder = d % 2;
+        b += remainder * i;
+        d /= 2;
+        i *= 10;
+    }
+    printf("Binary number: %d\n", b);
+    return 0;
+}
